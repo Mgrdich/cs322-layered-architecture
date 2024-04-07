@@ -1,4 +1,3 @@
 dependencies {
     implementation(project(":data"))
-    implementation(project(":data:data-store"))
 }

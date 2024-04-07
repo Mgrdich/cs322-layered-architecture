@@ -1,4 +1,4 @@
-package am.cs322;
+package am.cs322.model;
 
 public enum TransactionType {
     credit,

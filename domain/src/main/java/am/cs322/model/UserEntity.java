@@ -1,4 +1,4 @@
-package am.cs322;
+package am.cs322.model;
 
 
 import jakarta.persistence.Entity;
@@ -9,7 +9,7 @@ import jakarta.persistence.Column;
 
 
 @Entity
-@Table(name="Users")
+@Table(name="users")
 public class UserEntity {
     @Id
     @GeneratedValue

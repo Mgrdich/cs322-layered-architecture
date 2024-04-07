@@ -1,9 +1,9 @@
-package am.cs322;
+package am.cs322.model;
 
 import jakarta.persistence.*;
 
 @Entity
-@Table(name="Transactions")
+@Table(name="transactions")
 public class TransactionEntity {
     @Id
     @GeneratedValue
