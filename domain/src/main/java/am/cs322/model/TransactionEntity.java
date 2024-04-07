@@ -5,6 +5,14 @@ import jakarta.persistence.*;
 @Entity
 @Table(name="transactions")
 public class TransactionEntity {
+    public TransactionEntity() {
+
+    }
+    public TransactionEntity(TransactionType type, UserEntity user) {
+        this.type = type;
+        this.user = user;
+    }
+
     @Id
     @GeneratedValue
     private Long id;

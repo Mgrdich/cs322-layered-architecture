@@ -1,9 +1,11 @@
 package am.cs322.presentation;
 
 
+import am.cs322.presentation.modal.CreateTransactionRequest;
+
 public interface TransactionController {
 
-    void createCreditAccount();
+    String createCreditAccount(CreateTransactionRequest request);
 
-    void createDebitAccount();
+    String createDebitAccount(CreateTransactionRequest request);
 }

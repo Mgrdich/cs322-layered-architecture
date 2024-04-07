@@ -1,6 +1,7 @@
 package am.cs322;
 
 public interface TransactionService {
-    void createDebitAccount();
-    void createCreditAccount();
+    boolean createDebitAccount(Long user_id);
+
+    boolean createCreditAccount(Long user_id);
 }

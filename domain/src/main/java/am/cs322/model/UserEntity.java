@@ -33,6 +33,10 @@ public class UserEntity {
         return firstName;
     }
 
+    public Long getId() {
+        return id;
+    }
+
     public String getLastName() {
         return lastName;
     }
