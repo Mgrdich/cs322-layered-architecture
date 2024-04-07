@@ -11,6 +11,14 @@ import jakarta.persistence.Column;
 @Entity
 @Table(name="users")
 public class UserEntity {
+    public UserEntity() {
+
+    }
+    public UserEntity(String firstName, String lastName) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+    }
+
     @Id
     @GeneratedValue
     private Long id;
@@ -20,6 +28,14 @@ public class UserEntity {
 
     @Column(name="last_name")
     private String lastName;
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
 
     @Override
     public String toString() {

@@ -3,10 +3,9 @@ package am.cs322.presentation;
 import am.cs322.UserService;
 import am.cs322.model.UserDTO;
 import am.cs322.presentation.modal.CreateUserRequest;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @RestController
 @RequestMapping("/v1/users")
@@ -16,6 +15,12 @@ public class UserControllerImpl implements UserController {
 
     public UserControllerImpl(UserService userService) {
         this.userService = userService;
+    }
+
+
+    @GetMapping
+    public List<UserDTO>getAllUsers() {
+        return userService.getAllUsers();
     }
 
     @Override
