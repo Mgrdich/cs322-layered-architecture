@@ -9,10 +9,10 @@ public class TransactionEntity {
     @GeneratedValue
     private Long id;
 
-    @Column()
-    private String type;
+    @Enumerated(EnumType.ORDINAL)
+    private TransactionType type;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "id")
+    @JoinColumn(name = "user_id")
     private UserEntity user;
 }
