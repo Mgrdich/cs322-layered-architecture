@@ -3,12 +3,12 @@ package am.cs322.model;
 import jakarta.persistence.*;
 
 @Entity
-@Table(name="transactions")
-public class TransactionEntity {
-    public TransactionEntity() {
+@Table(name="accounts")
+public class AccountsEntity {
+    public AccountsEntity() {
 
     }
-    public TransactionEntity(TransactionType type, UserEntity user) {
+    public AccountsEntity(TransactionType type, UserEntity user) {
         this.type = type;
         this.user = user;
     }

@@ -1,6 +1,6 @@
 package am.cs322;
 
-import am.cs322.model.TransactionEntity;
+import am.cs322.model.AccountsEntity;
 import am.cs322.model.TransactionType;
 import am.cs322.model.UserEntity;
 import org.springframework.stereotype.Service;
@@ -19,7 +19,7 @@ public class TransactionServiceImpl implements TransactionService{
     @Override
     public boolean createDebitAccount(Long user_id) {
         Optional<UserEntity> user = userRepository.findById(user_id);
-        user.ifPresent(userEntity -> transactionRepository.save(new TransactionEntity(TransactionType.debit, userEntity)));
+        user.ifPresent(userEntity -> transactionRepository.save(new AccountsEntity(TransactionType.debit, userEntity)));
 
         return user.isPresent();
     }
@@ -27,7 +27,7 @@ public class TransactionServiceImpl implements TransactionService{
     @Override
     public boolean createCreditAccount(Long user_id) {
         Optional<UserEntity> user = userRepository.findById(user_id);
-        user.ifPresent(userEntity -> transactionRepository.save(new TransactionEntity(TransactionType.credit, userEntity)));
+        user.ifPresent(userEntity -> transactionRepository.save(new AccountsEntity(TransactionType.credit, userEntity)));
 
        return user.isPresent();
     }
